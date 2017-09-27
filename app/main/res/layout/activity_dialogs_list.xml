@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/dialogRootLayout"
+    android:padding="6sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@id/dialogContainer"
+            android:background="?attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@id/dialogAvatar"
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_margin="16dp"
+                android:src="@drawable/avatar_group_large" />
+            <TextView
+                android:ellipsize="end"
+                android:id="@id/dialogName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="16dp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:layout_toLeftOf="@id/dialogDate"
+                android:layout_toRightOf="@id/dialogAvatar"
+                android:fontFamily="@string/font_fontFamily_medium"
+                android:layout_marginEnd="16dp"
+                android:textColor="@android:color/black"
+                android:layout_toStartOf="@id/dialogDate"
+                android:layout_toEndOf="@id/dialogAvatar" />
+            <TextView
+                android:ellipsize="end"
+                android:id="@id/dialogDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:maxLines="1"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/dialogUnreadBubble"
+                android:layout_toRightOf="@id/dialogAvatar"
+                android:layout_below="@id/dialogName"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/dialogUnreadBubble"
+                android:layout_toEndOf="@id/dialogAvatar">
+                <TextView
+                    android:ellipsize="end"
+                    android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                    android:id="@id/dialogLastMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView
+                android:ellipsize="end"
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:id="@id/dialogUnreadBubble"
+                android:background="@drawable/bubble_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:lines="1"
+                android:layout_below="@id/dialogDate"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@string/font_fontFamily_medium"
+                android:layout_marginEnd="24dp"
+                android:layout_alignParentEnd="true" />
+            <FrameLayout
+                android:id="@id/dialogDividerContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentBottom="true">
+                <View android:id="@id/dialogDivider"
+                    android:background="@color/dialog_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
