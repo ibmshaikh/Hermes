@@ -1,7 +1,7 @@
 # Hermes
-Hermes is an open souurce Chat client in which u can chat anonymously. 
+Hermes is an open souurce Chat application in which u can chat anonymously. 
 
-It use Firebase RealTime Database To sync the Data in Realtime...
+It use Firebase realtime database to sync the data in realtime...
 
 Download Link= https://drive.google.com/open?id=1_YJBpU2URevUfVIYOMjKqGkzDSLIJnDg
 
